@@ -1,0 +1,29 @@
+body {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ height: 100%;
+ overflow-x: hidden;
+}
+
+h2 {
+ color: green;
+ margin: 0.1em;
+ transition: color 0.5s;
+}
+
+.container {
+ width: 100%;
+ margin: 0vh 50vw;
+}
+
+.bayan_container {
+ margin: 0 auto;
+ width: 70%;
+}
+
+main {
+ flex-grow: 1;
+ overflow-y: auto;
+ scrollbar-gutter: stable;
+}
