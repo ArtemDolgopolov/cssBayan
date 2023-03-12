@@ -51,6 +51,11 @@ label {
     transition: all 0.5s;
 }
 
+.bayan_btn path {
+    fill: black;
+    transition: all 0.5s;
+}
+
 .bayan_container label .bayan_body {
     cursor: pointer;
     width: 100%;
@@ -96,9 +101,13 @@ label .bayan_body img {
     width: 100%;
 }
 
-label:active .bayan_title h2,
-label:active .bayan_title img {
+label:active .bayan_title h2 {
     color: blueviolet;
+}
+
+label:active .bayan_title .bayan_btn path {
+    fill: blueviolet;
+    transition: all 0.5s;
 }
 
 .bayan_container label input {
@@ -130,5 +139,15 @@ label:active .bayan_title img {
         margin-top: 0.5vh;
         padding: 1.25em 1.8em 0.6em;
         transition: all 0.5s;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767.98px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 0.8em;
     }
 }
