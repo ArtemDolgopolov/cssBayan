@@ -155,6 +155,7 @@ label:active .bayan_title .bayan_btn path {
         opacity: 1;
         width: 1em;
         height: 1em;
+        transition: all 0.5s;
     }
 }
 
@@ -171,6 +172,7 @@ label:active .bayan_title .bayan_btn path {
         opacity: 1;
         width: 1.5em;
         height: 1.5em;
+        transition: all 0.5s;
     }
 }
 
