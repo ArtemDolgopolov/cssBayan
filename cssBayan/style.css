@@ -1,0 +1,192 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: "IBM Plex Mono", monospace;
+    background-image: url(assets/accordion.png);
+}
+
+h2 {
+    color: green;
+    margin: 0.1em;
+    transition: color 0.5s;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap;
+    margin: 0vh auto;
+}
+
+.bayan_container {
+    margin: 0 auto;
+    width: 70%;
+}
+
+main {
+    flex-grow: 1;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+}
+
+label {
+    border-bottom: 0.1vh solid lightslategray;
+}
+
+.bayan_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bayan_btn {
+    opacity: 0;
+    transform: rotate(90deg);
+    transition: all 0.5s;
+}
+
+.bayan_btn path {
+    fill: black;
+    transition: all 0.5s;
+}
+
+.bayan_container label .bayan_body {
+    cursor: pointer;
+    width: 100%;
+    margin: 0 auto;
+    max-height: 0;
+    line-height: 1rem;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+    transition: all 0.5s;
+    overflow: hidden;
+    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.2);
+}
+
+input:checked ~ .bayan_body {
+    cursor: pointer;
+    max-height: 200vh;
+    margin-top: 0.5vh;
+    padding: 1.5em 1.9em 0.6em;
+    transition: all 0.5s;
+}
+
+input:checked + .bayan_title h2 {
+    color: black;
+}
+
+input:checked + .bayan_title .bayan_btn {
+    transform: rotate(0);
+}
+
+.bayan_container label {
+    cursor: pointer;
+    display: block;
+    padding: 0.5vh 0.5vw;
+    width: 100%;
+    font-weight: 400;
+    box-sizing: border-box;
+    z-index: 99;
+    font-size: 1.5rem;
+    transition: all 0.5s;
+}
+
+label .bayan_body img {
+    width: 100%;
+}
+
+label:active .bayan_title h2 {
+    color: blueviolet;
+}
+
+label:active .bayan_title .bayan_btn path {
+    fill: blueviolet;
+    transition: all 0.5s;
+}
+
+.bayan_container label input {
+    display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .bayan_container:hover h2 {
+        color: black;
+        cursor: pointer;
+        transition: color 0.5s;
+    }
+
+    .bayan_container:hover .bayan_title .bayan_btn {
+        opacity: 1;
+        transition: all 0.5s;
+    }
+
+    label:hover .bayan_body {
+        cursor: pointer;
+        max-height: 200vh;
+        margin-top: 0.5vh;
+        padding: 1.25em 1.8em 0.6em;
+        transition: all 0.5s;
+    }
+
+    .bayan_body:hover {
+        cursor: pointer;
+        margin-top: 0.5vh;
+        padding: 1.25em 1.8em 0.6em;
+        transition: all 0.5s;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    h1 {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 0.6em;
+    }
+
+    .bayan_btn {
+        opacity: 1;
+        width: 1em;
+        height: 1em;
+        transition: all 0.5s;
+    }
+}
+
+@media screen and (min-width: 820px) {
+    h1 {
+        font-size: 1.4em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    .bayan_btn {
+        opacity: 1;
+        width: 1.5em;
+        height: 1.5em;
+        transition: all 0.5s;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    .bayan_btn {
+        width: 2em;
+        height: 2em;
+    }
+}
